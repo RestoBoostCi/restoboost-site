@@ -6,266 +6,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RestoBoost🚀</title>
+<title>RestoBoost</title>
 
-<link rel="manifest" href="manifest.json">
+<style>
 
-<link rel="stylesheet" href="style.css">
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0b1f2a,#163847);
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+background:#06141c;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+cursor:pointer;
+}
+
+/* PAGES */
+
+.page{
+display:none;
+padding:60px 20px;
+text-align:center;
+}
+
+.page.active{
+display:block;
+}
+
+/* BUTTON */
+
+.demo-btn{
+background:#ff4d4d;
+color:white;
+padding:15px 30px;
+border-radius:10px;
+text-decoration:none;
+font-size:18px;
+display:inline-block;
+margin-top:20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
 
 </head>
 
 <body>
 
-
-<!-- LOADING -->
-
-<div id="loader">
-
-<div class="rocket">🚀</div>
-
-<p>Chargement de RestoBoost...</p>
-
-</div>
-
-
 <header>
 
-<div class="logo">
+<div class="logo">RestoBoost 🚀</div>
 
-<img src="logo.png" alt="RestoBoost">
+<nav>
 
-</div>
-
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-<nav id="navMenu">
-
-<button onclick="showPage('home')">Accueil</button>
-<button onclick="showPage('services')">Services</button>
-<button onclick="showPage('why')">Pourquoi RestoBoost ?</button>
-<button onclick="showPage('demo')">Démo</button>
-<button onclick="showPage('contact')">Contact</button>
+<a onclick="showPage('home')">Accueil</a>
+<a onclick="showPage('services')">Services</a>
+<a onclick="showPage('demo')">Démo</a>
+<a onclick="showPage('contact')">Contact</a>
 
 </nav>
 
 </header>
 
-
-
-<div class="container">
-
 <!-- ACCUEIL -->
 
 <section id="home" class="page active">
 
-<h1>Bienvenue sur RestoBoost🚀</h1>
+<h1>Bienvenue sur RestoBoost 🚀</h1>
 
 <p>
-
-Nous sommes une agence spécialisée dans la digitalisation des restaurants en Côte d’Ivoire.
-
+Nous sommes une agence spécialisée dans la digitalisation des restaurants en Côte d'Ivoire.
 </p>
 
 <p>
-
-Nous aidons les établissements à moderniser leur image et à améliorer leur service.
-
-</p>
-
-<p>
-
-Cliquez sur <strong>Services</strong> pour découvrir ce que nous vous proposons.
-
-</p>
-
-<p class="highlight">
-
-Avec RestoBoost🚀, boostez vos ventes et modernisez votre restaurant en quelques secondes.
-
+Avec RestoBoost, boostez vos ventes et modernisez votre restaurant.
 </p>
 
 </section>
-
-
 
 <!-- SERVICES -->
 
 <section id="services" class="page">
 
-<h1>Nos Services</h1>
+<h2>Nos services</h2>
 
-<div class="cards">
-
-<div class="card">
-
-<h3>Création de site pour restaurant</h3>
-
-<p>
-
-Nous créons un site web moderne pour présenter votre restaurant, votre menu et attirer plus de clients.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Menu QR Code</h3>
-
-<p>
-
-Permettez à vos clients de consulter votre menu directement sur leur téléphone grâce à un QR code et de passer leur commande facilement.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Solutions digitales</h3>
-
-<p>
-
-Modernisez votre restaurant avec des outils digitaux simples, rapides et efficaces.
-
-</p>
-
-</div>
-
-</div>
+<p>Menu QR Code pour restaurants</p>
+<p>Création de site internet pour restaurants</p>
+<p>Solutions digitales pour établissements</p>
 
 </section>
 
+<!-- DEMO -->
 
+<section id="demo" class="page">
 
-<!-- POURQUOI RESTOBOOST -->
-
-<section id="why" class="page">
-
-<h1>Pourquoi choisir RestoBoost🚀 ?</h1>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Spécialiste des restaurants</h3>
+<h2>Testez un restaurant digitalisé</h2>
 
 <p>
-
-Nous créons des solutions digitales spécialement conçues pour les restaurants.
-
+Découvrez comment fonctionne un restaurant équipé d'un menu QR code avec RestoBoost.
 </p>
 
-</div>
-
-
-<div class="card">
-
-<h3>Plus de clients</h3>
-
-<p>
-
-Un menu digital améliore l'expérience client et augmente le nombre de commandes.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Restaurant moderne</h3>
-
-<p>
-
-Montrez à vos clients que votre restaurant est moderne grâce à la digitalisation.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<a href="https://restoboostci.github.io/restaurant-demo/" target="_blank">
-Tester la démo
+<a href="https://restoboostci.github.io/restaurant-demo/" target="_blank" class="demo-btn">
+Voir la démo du restaurant
 </a>
 
-
-<p>
-
-Découvrez un exemple de restaurant digitalisé avec RestoBoost🚀.
-
-</p>
-
-
-
-
+</section>
 
 <!-- CONTACT -->
 
 <section id="contact" class="page">
 
-<h1>Contactez notre agence</h1>
+<h2>Contact</h2>
 
-<div class="contact-box">
+<p>📍 Abidjan</p>
 
-<p><strong>Téléphone :</strong> 0554901363</p>
+<p>📱 WhatsApp : 0554901363</p>
 
-<p><strong>Email :</strong> restoboost19@gmail.com</p>
-
-<p><strong>Localisation :</strong> Abidjan, Côte d’Ivoire</p>
-
-</div>
+<p>✉️ restoboost19@gmail.com</p>
 
 </section>
 
-</div>
-
-
-
-<a href="https://wa.me/2250554901363" target="_blank" class="whatsapp">
-
+<a href="https://wa.me/2250554901363" class="whatsapp">
 WhatsApp
-
 </a>
 
+<script>
 
-<script src="script.js"></script>
+function showPage(page){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active");
+});
+
+document.getElementById(page).classList.add("active");
+
+}
+
+</script>
 
 </body>
-
 </html>
-<section id="demo" style="text-align:center;padding:80px 20px;background:#0b1f2a;color:white;">
 
-<h2 style="font-size:34px;margin-bottom:20px;">
-Testez un restaurant digitalisé
-</h2>
-
-<p style="font-size:18px;max-width:600px;margin:auto;margin-bottom:30px;">
-Découvrez comment fonctionne un restaurant équipé d'un menu QR code avec RestoBoost.
-Commandez un plat ou appelez un serveur comme dans un vrai restaurant.
-</p>
-
-<a href="https://restoboostci.github.io/restaurant-demo/" target="_blank"
-style="
-background:#ff4d4d;
-color:white;
-padding:16px 35px;
-border-radius:10px;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-display:inline-block;
-">
-
-Voir la démo du restaurant
-
-</a>
-
-</section>
