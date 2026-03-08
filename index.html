@@ -32,6 +32,8 @@ font-size:20px;
 font-weight:bold;
 }
 
+/* MENU */
+
 nav a{
 margin-left:20px;
 color:white;
@@ -43,7 +45,7 @@ cursor:pointer;
 
 .page{
 display:none;
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
@@ -51,7 +53,17 @@ text-align:center;
 display:block;
 }
 
-/* BUTTON */
+/* TITRES */
+
+h1{
+font-size:40px;
+}
+
+h2{
+font-size:30px;
+}
+
+/* BOUTON DEMO */
 
 .demo-btn{
 background:#ff4d4d;
@@ -92,6 +104,7 @@ font-weight:bold;
 
 <a onclick="showPage('home')">Accueil</a>
 <a onclick="showPage('services')">Services</a>
+<a onclick="showPage('why')">Pourquoi RestoBoost</a>
 <a onclick="showPage('demo')">Démo</a>
 <a onclick="showPage('contact')">Contact</a>
 
@@ -106,12 +119,20 @@ font-weight:bold;
 <h1>Bienvenue sur RestoBoost 🚀</h1>
 
 <p>
-Nous sommes une agence spécialisée dans la digitalisation des restaurants en Côte d'Ivoire.
+Nous sommes une agence spécialisée dans la digitalisation des restaurants en Côte d’Ivoire.
 </p>
 
 <p>
-Avec RestoBoost, boostez vos ventes et modernisez votre restaurant.
+Nous aidons les établissements à moderniser leur image et améliorer leur service.
 </p>
+
+<p>
+Cliquez sur <b>Services</b> pour découvrir ce que nous vous proposons.
+</p>
+
+<h2 style="color:#ffc107;">
+Avec RestoBoost 🚀, boostez vos ventes et modernisez votre restaurant en quelques secondes.
+</h2>
 
 </section>
 
@@ -127,6 +148,27 @@ Avec RestoBoost, boostez vos ventes et modernisez votre restaurant.
 
 </section>
 
+<!-- POURQUOI RESTOBOOST -->
+
+<section id="why" class="page">
+
+<h2>Pourquoi RestoBoost ?</h2>
+
+<p>
+Les restaurants doivent aujourd’hui s’adapter au digital pour améliorer l’expérience client.
+</p>
+
+<p>
+Avec RestoBoost vous obtenez :
+</p>
+
+<p>✔ Menu QR Code moderne</p>
+<p>✔ Commande rapide depuis le téléphone</p>
+<p>✔ Image moderne pour votre restaurant</p>
+<p>✔ Solution simple et efficace</p>
+
+</section>
+
 <!-- DEMO -->
 
 <section id="demo" class="page">
@@ -135,6 +177,7 @@ Avec RestoBoost, boostez vos ventes et modernisez votre restaurant.
 
 <p>
 Découvrez comment fonctionne un restaurant équipé d'un menu QR code avec RestoBoost.
+Commandez un plat ou appelez un serveur comme dans un vrai restaurant.
 </p>
 
 <a href="https://restoboostci.github.io/restaurant-demo/" target="_blank" class="demo-btn">
@@ -177,4 +220,3 @@ document.getElementById(page).classList.add("active");
 
 </body>
 </html>
-
