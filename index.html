@@ -13,7 +13,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(135deg,#0b1f2a,#163847);
+background:linear-gradient(135deg,#0b1f2a,#163847,#0b1f2a);
 color:white;
 }
 
@@ -23,29 +23,60 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
+padding:15px 20px;
 background:#06141c;
+position:relative;
 }
 
 .logo{
-font-size:20px;
+font-size:22px;
 font-weight:bold;
 }
 
-/* MENU */
+/* MENU DESKTOP */
+
+nav{
+display:flex;
+gap:20px;
+}
 
 nav a{
-margin-left:20px;
 color:white;
 text-decoration:none;
 cursor:pointer;
+font-size:16px;
+}
+
+/* MENU MOBILE */
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+.mobile-menu{
+display:none;
+flex-direction:column;
+background:#06141c;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+.mobile-menu a{
+margin-bottom:15px;
+text-decoration:none;
+color:white;
 }
 
 /* PAGES */
 
 .page{
 display:none;
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
@@ -63,7 +94,27 @@ h2{
 font-size:30px;
 }
 
-/* BOUTON DEMO */
+/* SERVICES */
+
+.service{
+background:rgba(255,255,255,0.05);
+padding:20px;
+margin:20px auto;
+max-width:500px;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact-box{
+background:rgba(255,255,255,0.05);
+padding:30px;
+max-width:400px;
+margin:auto;
+border-radius:10px;
+}
+
+/* DEMO */
 
 .demo-btn{
 background:#ff4d4d;
@@ -90,6 +141,20 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
 </style>
 
 </head>
@@ -109,6 +174,18 @@ font-weight:bold;
 <a onclick="showPage('contact')">Contact</a>
 
 </nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a onclick="showPage('home')">Accueil</a>
+<a onclick="showPage('services')">Services</a>
+<a onclick="showPage('why')">Pourquoi RestoBoost</a>
+<a onclick="showPage('demo')">Démo</a>
+<a onclick="showPage('contact')">Contact</a>
+
+</div>
 
 </header>
 
@@ -140,11 +217,37 @@ Avec RestoBoost 🚀, boostez vos ventes et modernisez votre restaurant en quelq
 
 <section id="services" class="page">
 
-<h2>Nos services</h2>
+<h2>Nos Services</h2>
 
-<p>Menu QR Code pour restaurants</p>
-<p>Création de site internet pour restaurants</p>
-<p>Solutions digitales pour établissements</p>
+<div class="service">
+
+<h3>Création de site pour votre restaurant</h3>
+
+<p>
+Un site web moderne pour présenter votre restaurant, votre menu et attirer plus de clients.
+</p>
+
+</div>
+
+<div class="service">
+
+<h3>Menu QR Code</h3>
+
+<p>
+Permettez à vos clients de consulter votre menu directement sur leur téléphone grâce à un QR code et de passer leur commande depuis leur téléphone.
+</p>
+
+</div>
+
+<div class="service">
+
+<h3>Solutions digitales pour votre restaurant</h3>
+
+<p>
+Modernisez votre restaurant avec des outils digitaux simples et efficaces.
+</p>
+
+</div>
 
 </section>
 
@@ -152,20 +255,37 @@ Avec RestoBoost 🚀, boostez vos ventes et modernisez votre restaurant en quelq
 
 <section id="why" class="page">
 
-<h2>Pourquoi RestoBoost ?</h2>
+<h2>Pourquoi RestoBoost 🚀 ?</h2>
+
+<div class="service">
+
+<h3>Spécialiste restaurants</h3>
 
 <p>
-Les restaurants doivent aujourd’hui s’adapter au digital pour améliorer l’expérience client.
+Nous créons des solutions digitales spécialement conçues pour les restaurants.
 </p>
+
+</div>
+
+<div class="service">
+
+<h3>Plus de clients</h3>
 
 <p>
-Avec RestoBoost vous obtenez :
+Un menu digital améliore l'expérience client et augmente les commandes.
 </p>
 
-<p>✔ Menu QR Code moderne</p>
-<p>✔ Commande rapide depuis le téléphone</p>
-<p>✔ Image moderne pour votre restaurant</p>
-<p>✔ Solution simple et efficace</p>
+</div>
+
+<div class="service">
+
+<h3>Restaurant moderne</h3>
+
+<p>
+Montrez que votre restaurant est moderne grâce à la digitalisation.
+</p>
+
+</div>
 
 </section>
 
@@ -177,11 +297,12 @@ Avec RestoBoost vous obtenez :
 
 <p>
 Découvrez comment fonctionne un restaurant équipé d'un menu QR code avec RestoBoost.
-Commandez un plat ou appelez un serveur comme dans un vrai restaurant.
 </p>
 
 <a href="https://restoboostci.github.io/restaurant-demo/" target="_blank" class="demo-btn">
+
 Voir la démo du restaurant
+
 </a>
 
 </section>
@@ -192,16 +313,25 @@ Voir la démo du restaurant
 
 <h2>Contact</h2>
 
-<p>📍 Abidjan</p>
+<div class="contact-box">
 
-<p>📱 WhatsApp : 0554901363</p>
+<p><b>Téléphone</b></p>
+<p>0554901363</p>
 
-<p>✉️ restoboost19@gmail.com</p>
+<p><b>Email</b></p>
+<p>restoboost19@gmail.com</p>
+
+<p><b>Localisation</b></p>
+<p>Abidjan</p>
+
+</div>
 
 </section>
 
 <a href="https://wa.me/2250554901363" class="whatsapp">
+
 WhatsApp
+
 </a>
 
 <script>
@@ -214,9 +344,24 @@ p.classList.remove("active");
 
 document.getElementById(page).classList.add("active");
 
+document.getElementById("mobileMenu").style.display="none";
+
+}
+
+function toggleMenu(){
+
+let menu=document.getElementById("mobileMenu");
+
+if(menu.style.display==="flex"){
+menu.style.display="none";
+}else{
+menu.style.display="flex";
+}
+
 }
 
 </script>
 
 </body>
+
 </html>
