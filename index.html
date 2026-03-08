@@ -15,6 +15,7 @@ margin:0;
 font-family:Arial;
 background:linear-gradient(135deg,#0b1f2a,#163847,#0b1f2a);
 color:white;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -28,12 +29,21 @@ background:#06141c;
 position:relative;
 }
 
+/* LOGO */
+
 .logo{
 font-size:22px;
 font-weight:bold;
+animation:logoFloat 3s infinite ease-in-out;
 }
 
-/* MENU DESKTOP */
+@keyframes logoFloat{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0px);}
+}
+
+/* MENU */
 
 nav{
 display:flex;
@@ -45,6 +55,11 @@ color:white;
 text-decoration:none;
 cursor:pointer;
 font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ffc107;
 }
 
 /* MENU MOBILE */
@@ -78,10 +93,24 @@ color:white;
 display:none;
 padding:80px 20px;
 text-align:center;
+animation:fadeIn 0.8s ease;
 }
 
 .page.active{
 display:block;
+}
+
+/* ANIMATION APPARITION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* TITRES */
@@ -102,6 +131,12 @@ padding:20px;
 margin:20px auto;
 max-width:500px;
 border-radius:10px;
+transition:0.4s;
+}
+
+.service:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.1);
 }
 
 /* CONTACT */
@@ -114,7 +149,7 @@ margin:auto;
 border-radius:10px;
 }
 
-/* DEMO */
+/* DEMO BUTTON */
 
 .demo-btn{
 background:#ff4d4d;
@@ -125,6 +160,12 @@ text-decoration:none;
 font-size:18px;
 display:inline-block;
 margin-top:20px;
+transition:0.3s;
+}
+
+.demo-btn:hover{
+background:#ff2a2a;
+transform:scale(1.05);
 }
 
 /* WHATSAPP */
@@ -139,6 +180,7 @@ padding:15px 20px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 
 /* MOBILE */
@@ -251,7 +293,7 @@ Modernisez votre restaurant avec des outils digitaux simples et efficaces.
 
 </section>
 
-<!-- POURQUOI RESTOBOOST -->
+<!-- POURQUOI -->
 
 <section id="why" class="page">
 
